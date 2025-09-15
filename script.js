@@ -1,30 +1,24 @@
-// --- PRETRAGA PO NAZIVU ---
-function searchCars() {
-    const text = document.getElementById("search").value.toLowerCase();
-    document.querySelectorAll(".card").forEach(card => {
-        const title = card.querySelector("h3").textContent.toLowerCase();
-        card.style.display = title.includes(text) ? "block" : "none";
-    });
+const searchInput = document.getElementById('searchInput');
+const brandFilter = document.getElementById('brandFilter');
+const cards = document.querySelectorAll('.grid .card');
+
+function filterCars() {
+  const text = searchInput.value.toLowerCase();
+  const brand = brandFilter.value.toLowerCase();
+
+  cards.forEach(card => {
+    const name = card.querySelector('h3').textContent.toLowerCase();
+    const cardBrand = card.dataset.brand.toLowerCase();
+    const matchText = name.includes(text);
+    const matchBrand = brand === "" || cardBrand.includes(brand);
+
+    if (matchText && matchBrand) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  });
 }
 
-// --- SORTIRANJE PO CIJENI I SNAZI ---
-function sortCars() {
-    const type = document.getElementById("sort").value;
-    const grid = document.querySelector(".grid");
-    const cards = Array.from(grid.children);
-
-    cards.sort((a,b)=>{
-        const priceA = parseInt(a.dataset.price);
-        const priceB = parseInt(b.dataset.price);
-        const powerA = parseInt(a.dataset.power);
-        const powerB = parseInt(b.dataset.power);
-
-        if (type==="price-asc")  return priceA - priceB;
-        if (type==="price-desc") return priceB - priceA;
-        if (type==="power-asc")  return powerA - powerB;
-        if (type==="power-desc") return powerB - powerA;
-        return 0;
-    });
-
-    cards.forEach(c => grid.appendChild(c)); // ponovo ih poredaj u DOM-u
-}
+searchInput.addEventListener('input', filterCars);
+brandFilter.addEventListener('change', filterCars);
