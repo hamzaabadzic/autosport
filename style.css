@@ -1,37 +1,45 @@
-
-body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4; }
+body { font-family: Arial, sans-serif; margin:0; background:#f4f4f4; color:#222; }
 .hero { background: url('https://i.ytimg.com/vi/KV48G5NUxUs/maxresdefault.jpg') center/cover no-repeat; padding:80px 20px; text-align:center; color:white; }
 .hero h1 { font-size:50px; margin-bottom:10px; text-shadow:2px 2px 5px black; }
 .hero p { font-size:20px; margin-bottom:20px; text-shadow:1px 1px 3px black; }
 .hero a { background:#e74c3c; padding:15px 30px; border-radius:8px; color:white; text-decoration:none; font-weight:bold; }
-.grid { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; margin:20px 0; }
-.card { width:300px; border:1px solid #ddd; border-radius:12px; padding:15px; background:white; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.15); }
-.card img { border-radius:8px; width:100%; }
+
+.section-title { text-align:center; margin:50px 0 20px; font-size:36px; color:#2c3e50; }
+
+.search-filter {
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+  margin: 20px auto 10px;
+  padding: 0 10px;
+}
+#searchInput, #brandFilter, #sortFilter {
+  padding:10px 12px;
+  margin: 5px;
+  font-size:16px;
+  border-radius:8px;
+  border:1px solid #d0d0d0;
+  background:white;
+}
+
+.grid { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; margin:20px 10px; }
+.card { width:300px; border:1px solid #eee; border-radius:12px; padding:15px; background:white; text-align:center; box-shadow:0 4px 10px rgba(0,0,0,0.08); transition:transform .25s ease, box-shadow .25s ease; }
+.card img { border-radius:8px; width:100%; height:180px; object-fit:cover; }
 .card h3 { margin:10px 0; color:#e74c3c; }
-.card p { color:#27ae60; font-weight:bold; }
+.card p { color:#27ae60; font-weight:bold; margin:6px 0; }
 .card a { display:inline-block; margin-top:10px; padding:10px 20px; background:#e74c3c; color:#fff; border-radius:6px; text-decoration:none; }
+
+.card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.12); }
+
 .contact { margin-top:60px; padding:30px; background:#2c3e50; color:white; text-align:center; border-radius:12px; }
 .contact a { display:inline-block; margin-top:15px; padding:12px 25px; background:#e74c3c; color:white; border-radius:8px; text-decoration:none; font-weight:bold; }
-.search-filter {
-  text-align:center;
-  margin: 20px auto 40px;
-}
-#searchInput, #brandFilter {
-  padding:10px;
-  margin: 5px;
-  font-size:16px;
-}
 
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-}
+.no-results { text-align:center; color:#c0392b; font-weight:700; margin-top:12px; }
 
-#sortFilter {
-  padding:10px;
-  margin: 5px;
-  font-size:16px;
+@media (max-width:640px){
+  .hero h1 { font-size:30px; }
+  .card { width:90%; }
+  .grid { gap:16px; }
 }
