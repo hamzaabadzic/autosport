@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="bs">
 <head>
-<meta charset="UTF-8">
-<title>AutoSport – Premium Sportski Automobili</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>AutoSport – Premium Sportski Automobili</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -14,13 +15,14 @@
   <a href="#ponuda">Pogledaj ponudu</a>
 </div>
 
-<h2 id="ponuda" style="text-align:center; margin:50px 0 20px; font-size:36px; color:#2c3e50;">
-🔥 Naša Premium Ponuda 🔥
+<h2 id="ponuda" class="section-title">
+  🔥 Naša Premium Ponuda 🔥
 </h2>
 
 <!-- 🔍 SEARCH & FILTER -->
 <div class="search-filter">
   <input type="text" id="searchInput" placeholder="Pretraži po nazivu...">
+
   <select id="brandFilter">
     <option value="">Sve marke</option>
     <option value="Ferrari">Ferrari</option>
@@ -35,19 +37,25 @@
     <option value="Audi">Audi</option>
   </select>
 
-  
-
+  <select id="sortFilter">
+    <option value="">Sortiraj</option>
+    <option value="price-asc">Cijena (najniža)</option>
+    <option value="price-desc">Cijena (najviša)</option>
+    <option value="power-asc">Snaga (najmanja)</option>
+    <option value="power-desc">Snaga (najveća)</option>
+    <option value="name-asc">Naziv (A-Z)</option>
+    <option value="name-desc">Naziv (Z-A)</option>
+  </select>
 </div>
 
-  <p id="noResults" style="text-align:center; color:red; font-weight:bold; display:none;">
+<p id="noResults" class="no-results" style="display:none;">
   ❌ Nema rezultata za pretragu.
 </p>
-
 
 <div class="grid">
   <!-- AUTO 1 -->
   <div class="card" data-brand="Ferrari">
-    <img src="https://www.charles-pozzi.fr/wp-content/uploads/cp_images//1713740400/photo/1479/1/2559_2.jpg" width="300" height="200">
+    <img src="https://www.charles-pozzi.fr/wp-content/uploads/cp_images//1713740400/photo/1479/1/2559_2.jpg" width="300" height="200" alt="Ferrari F8">
     <h3>Ferrari F8 Tributo</h3>
     <p>720 KS – Supercar</p>
     <p>Cijena: 320,000 €</p>
@@ -56,7 +64,7 @@
 
   <!-- AUTO 2 -->
   <div class="card" data-brand="Lamborghini">
-    <img src="https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_240,q_auto:good,w_385/penend4bfq6go3arnfsm.jpg" width="300" height="200">
+    <img src="https://res.cloudinary.com/unix-center/image/upload/c_limit,dpr_3.0,f_auto,fl_progressive,g_center,h_240,q_auto:good,w_385/penend4bfq6go3arnfsm.jpg" width="300" height="200" alt="Lamborghini Huracan">
     <h3>Lamborghini Huracán EVO</h3>
     <p>640 KS – V10 Motor</p>
     <p>Cijena: 380,000 €</p>
@@ -65,7 +73,7 @@
 
   <!-- AUTO 3 -->
   <div class="card" data-brand="Porsche">
-    <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ijsxlvQB.bu8/v0/-1x-1.webp" width="300" height="200">
+    <img src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/ijsxlvQB.bu8/v0/-1x-1.webp" width="300" height="200" alt="Porsche 911">
     <h3>Porsche 911 Turbo S</h3>
     <p>650 KS – Supercar</p>
     <p>Cijena: 220,000 €</p>
@@ -74,7 +82,7 @@
 
   <!-- AUTO 4 -->
   <div class="card" data-brand="McLaren">
-    <img src="https://cdn.prod.website-files.com/5b4a3b3971d099f78f362505/64e0df2c72114e0befc6fd09_2018-Mclaren-720S-Coupe-Glacier-White-SBM14DCA1JW000969_013.webp" width="300" height="200">
+    <img src="https://cdn.prod.website-files.com/5b4a3b3971d099f78f362505/64e0df2c72114e0befc6fd09_2018-Mclaren-720S-Coupe-Glacier-White-SBM14DCA1JW000969_013.webp" width="300" height="200" alt="McLaren 720S">
     <h3>McLaren 720S</h3>
     <p>720 KS – Supercar</p>
     <p>Cijena: 310,000 €</p>
@@ -83,7 +91,7 @@
 
   <!-- AUTO 5 -->
   <div class="card" data-brand="Mercedes">
-    <img src="https://www.gallery-aaldering.com/wp-content/uploads/2023/12/mercedes-amg-gtr-2020.jpg" width="300" height="200">
+    <img src="https://www.gallery-aaldering.com/wp-content/uploads/2023/12/mercedes-amg-gtr-2020.jpg" width="300" height="200" alt="Mercedes AMG GT R">
     <h3>Mercedes-AMG GT R</h3>
     <p>585 KS – Supercar</p>
     <p>Cijena: 220,000 €</p>
@@ -92,7 +100,7 @@
 
   <!-- AUTO 6 -->
   <div class="card" data-brand="BMW">
-    <img src="https://bringatrailer.com/wp-content/uploads/2024/03/2020_bmw_m8-competition_dsc08479-95434.jpeg" width="300" height="200">
+    <img src="https://bringatrailer.com/wp-content/uploads/2024/03/2020_bmw_m8-competition_dsc08479-95434.jpeg" width="300" height="200" alt="BMW M8">
     <h3>BMW M8 Competition</h3>
     <p>625 KS – Supercar</p>
     <p>Cijena: 200,000 €</p>
@@ -101,7 +109,7 @@
 
   <!-- AUTO 7 -->
   <div class="card" data-brand="Nissan">
-    <img src="https://www.nissanusa.com/interactivebrochures/sportscars/gtr/gt-r-nismo/assets/Nissan/articles/N_24GT-R/nismo/d01-gtr-nismo-img-01.jpg?6b777752c3d0d025184822703486ebf0" width="300" height="200">
+    <img src="https://www.nissanusa.com/interactivebrochures/sportscars/gtr/gt-r-nismo/assets/Nissan/articles/N_24GT-R/nismo/d01-gtr-nismo-img-01.jpg?6b777752c3d0d025184822703486ebf0" width="300" height="200" alt="Nissan GT-R">
     <h3>Nissan GT-R Nismo</h3>
     <p>600 KS – Supercar</p>
     <p>Cijena: 210,000 €</p>
@@ -110,7 +118,7 @@
 
   <!-- AUTO 8 -->
   <div class="card" data-brand="Aston">
-    <img src="https://hips.hearstapps.com/hmg-prod/images/2026-aston-martin-vantage-roadster-112-681b61e83bfee.jpg?crop=0.719xw:0.539xh;0.0976xw,0.224xh&resize=1200:*" width="300" height="200">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/2026-aston-martin-vantage-roadster-112-681b61e83bfee.jpg?crop=0.719xw:0.539xh;0.0976xw,0.224xh&resize=1200:*" width="300" height="200" alt="Aston Martin Vantage">
     <h3>Aston Martin Vantage</h3>
     <p>510 KS – Supercar</p>
     <p>Cijena: 180,000 €</p>
@@ -119,7 +127,7 @@
 
   <!-- AUTO 9 -->
   <div class="card" data-brand="Ford">
-    <img src="https://cdn.rmsothebys.com/7/d/d/2/7/e/7dd27e350cbb6debe9a9d4a9690fbe514dc1f5eb.webp" width="300" height="200">
+    <img src="https://cdn.rmsothebys.com/7/d/d/2/7/e/7dd27e350cbb6debe9a9d4a9690fbe514dc1f5eb.webp" width="300" height="200" alt="Ford GT">
     <h3>Ford GT</h3>
     <p>660 KS – Supercar</p>
     <p>Cijena: 450,000 €</p>
@@ -128,7 +136,7 @@
 
   <!-- AUTO 10 -->
   <div class="card" data-brand="Audi">
-    <img src="https://images.pistonheads.com/nimg/46501/mceu_6169168411669210667502.jpg" width="300" height="200">
+    <img src="https://images.pistonheads.com/nimg/46501/mceu_6169168411669210667502.jpg" width="300" height="200" alt="Audi R8">
     <h3>Audi R8</h3>
     <p>620 KS – Supercar</p>
     <p>Cijena: 210,000 €</p>
