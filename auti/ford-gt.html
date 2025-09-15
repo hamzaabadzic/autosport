@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html lang="bs">
-<head><meta charset="UTF-8"><title>Ford GT – Detalji</title>
-<link rel="stylesheet" href="../style.css"></head>
+<head>
+<meta charset="UTF-8">
+<title>Ford GT - Detalji</title>
+<style>
+body { font-family: Arial, sans-serif; margin:0; padding:20px; background:#f4f4f4; }
+.container { max-width:900px; margin:auto; background:#fff; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.2); }
+.car-header { display:flex; align-items:center; gap:20px; flex-wrap:wrap; }
+.car-header img { width:300px; border-radius:10px; }
+.car-info h1 { margin:0; }
+.specs { margin-top:20px; }
+.specs h2 { margin-bottom:10px; }
+.specs ul { list-style:none; padding:0; }
+.specs li { padding:5px 0; border-bottom:1px solid #ddd; }
+.back-btn { display:inline-block; margin-top:20px; padding:10px 15px; background:crimson; color:white; border-radius:5px; text-decoration:none; }
+</style>
+</head>
 <body>
-<div style="padding:30px; max-width:900px; margin:auto;">
-<h1 style="color:#e74c3c;">Ford GT</h1>
-<img src="https://cdn.motor1.com/images/mgl/P9mNm/s1/ford-gt.jpg" style="width:100%; border-radius:10px; margin-bottom:20px;">
-<p><strong>Cijena:</strong> 660 KS €</p>
-<p><strong>Snaga:</strong> 660 KS</p>
-<p><strong>0-100 km/h:</strong> 3.0 sekunde</p>
-<p><strong>Maksimalna brzina:</strong> 347 km/h</p>
-<h2>Opis</h2>
-<p>Ford GT je nevjerovatan sportski automobil sa impresivnim performansama i elegantnim dizajnom, idealan za ljubitelje brzine.</p>
-<h2>Dodatne slike</h2>
-<img src="https://cdn.motor1.com/images/mgl/P9mNm/s1/ford-gt.jpg" style="width:48%; margin:1%; border-radius:10px;">
-<img src="https://cdn.motor1.com/images/mgl/P9mNm/s1/ford-gt.jpg" style="width:48%; margin:1%; border-radius:10px;">
-
+<div class="container">
+  <div class="car-header">
+    <img src="https://hips.hearstapps.com/hmg-prod/images/2022-ford-gt-heritage-edition-111-1628777672.jpg" alt="Ford GT">
+    <div class="car-info">
+      <h1>Ford GT</h1>
+      <p><strong>Cijena:</strong> 450,000 €</p>
+      <p><strong>Snaga:</strong> 660 KS</p>
+    </div>
+  </div>
+  <div class="specs">
+    <h2>Tehničke specifikacije</h2>
+    <ul>
+      <li>Motor: 3.5L V6 Twin Turbo</li>
+      <li>0-100 km/h: 3.0s</li>
+      <li>Maksimalna brzina: 348 km/h</li>
+      <li>Mjenjač: 7-stepeni automatik</li>
+      <li>Težina: 1,385 kg</li>
+    </ul>
+  </div>
+  <div class="description">
+    <h2>Opis</h2>
+    <p>Ford GT je američki superautomobil sa istorijom trkačkih performansi i futurističkim dizajnom.</p>
+  </div>
+  <a href="../index.html" class="back-btn">← Nazad</a>
 </div>
 </body>
 </html>
